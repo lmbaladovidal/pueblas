@@ -3,8 +3,6 @@
 
 import sqlite3 as bdapi
 import gtk
-import gobject
-import dbus, dbus.service, dbus.glib
 
 from actualizaciones.actualizar import actualizaciones
 from altas.agregar import altas
