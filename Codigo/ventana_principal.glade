@@ -240,7 +240,7 @@
                     <property name="height_request">57</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Rosario Plastico</property>
+                    <property name="label" translatable="yes">Hardy Kiosco</property>
                     <attributes>
                       <attribute name="weight" value="ultraheavy"/>
                       <attribute name="size" value="40000"/>
@@ -249,42 +249,6 @@
                   <packing>
                     <property name="x">414</property>
                     <property name="y">5</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkLabel" id="label8">
-                    <property name="width_request">488</property>
-                    <property name="height_request">30</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">BAZAR - JUGUETERIA - LIBRERIA</property>
-                    <attributes>
-                      <attribute name="weight" value="ultraheavy"/>
-                      <attribute name="size" value="17000"/>
-                    </attributes>
-                  </object>
-                  <packing>
-                    <property name="x">394</property>
-                    <property name="y">59</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkLabel" id="label9">
-                    <property name="width_request">316</property>
-                    <property name="height_request">63</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes"> Calle 17 N° 285 - Tel. 02324-427209
-Calle 12 N° 1018 -Tel. 02324-424151
- Calle 17 N° 272 - Tel. 02324-427209</property>
-                    <attributes>
-                      <attribute name="weight" value="ultraheavy"/>
-                      <attribute name="size" value="12000"/>
-                    </attributes>
-                  </object>
-                  <packing>
-                    <property name="x">482</property>
-                    <property name="y">96</property>
                   </packing>
                 </child>
               </object>

@@ -23,7 +23,7 @@ class control():
 			tupla_resultado = cursor.fetchall()
 			if tupla_resultado != []:
 				for tupla in tupla_resultado:
-					self.liststore.append([int(tupla[1]),tupla[2],tupla[3],tupla[4],tupla[5],tupla[6],tupla[7]])
+					self.liststore.append([int(tupla[1]),tupla[2],tupla[3],tupla[5],tupla[6],tupla[7],tupla[8]])
 
 	def desbloquear_entry(self,widget):
 		self.entry_filtro.set_sensitive(True)
@@ -37,7 +37,12 @@ class control():
 
 	def restar_cantidad(self,widget):
 		ruta = os.getcwd()
-		self.tupla[4]= self.tupla[4]-int(self.entry_cantidad.get_text())
+		cantidad_a_restar = self.entry_cantidad.get_text()
+		if cantidad_a_restar == "":
+			cantidad_a_restar = 1
+		else:
+			cantidad_a_restar = int(cantidad_a_restar)
+		self.tupla[4]= self.tupla[4]-cantidad_a_restar
 		if self.tupla[5] >= self.tupla[4]:
 			self.tupla.append(True)
 		else:
