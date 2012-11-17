@@ -140,6 +140,17 @@ class principal() :
 ###########################LISTSTORES-TREEVIEW#############################
 		self.treeview = self.glade.get_object("treeview")
 		self.liststore = self.glade.get_object("liststore")
+
+##########################################DANDO COLOR######################################
+		cellrenders="cellrenderertext","cellrenderertext5","cellrenderertext6","cellrenderertext7","cellrenderertext1","cellrenderertext3","cellrenderertext14"
+		colum="clm_codigo","clm_descripcion","clm_marca","clm_costo","clm_precio","clm_stk_act","clm_ptn_rep"
+		self.columnas=[]
+		self.renders=[]
+		for x,col in enumerate(colum):
+			self.columnas.append(self.glade.get_object(col) )
+			self.renders.append(self.glade.get_object(cellrenders[x] ) )
+			self.columnas[x].set_attributes(self.renders[x],text=x,cell_background_set=7)
+
 		self.conectar_bd()
 ############################CONECTANDO SEÑALES#############################
 		self.window.connect("key-press-event",self.teclas)
