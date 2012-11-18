@@ -240,7 +240,7 @@
                     <property name="height_request">57</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Rosario Plastico</property>
+                    <property name="label" translatable="yes">Hardy Kiosco</property>
                     <attributes>
                       <attribute name="weight" value="ultraheavy"/>
                       <attribute name="size" value="40000"/>
@@ -249,42 +249,6 @@
                   <packing>
                     <property name="x">414</property>
                     <property name="y">5</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkLabel" id="label8">
-                    <property name="width_request">488</property>
-                    <property name="height_request">30</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">BAZAR - JUGUETERIA - LIBRERIA</property>
-                    <attributes>
-                      <attribute name="weight" value="ultraheavy"/>
-                      <attribute name="size" value="17000"/>
-                    </attributes>
-                  </object>
-                  <packing>
-                    <property name="x">394</property>
-                    <property name="y">59</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkLabel" id="label9">
-                    <property name="width_request">316</property>
-                    <property name="height_request">63</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes"> Calle 17 N° 285 - Tel. 02324-427209
-Calle 12 N° 1018 -Tel. 02324-424151
- Calle 17 N° 272 - Tel. 02324-427209</property>
-                    <attributes>
-                      <attribute name="weight" value="ultraheavy"/>
-                      <attribute name="size" value="12000"/>
-                    </attributes>
-                  </object>
-                  <packing>
-                    <property name="x">482</property>
-                    <property name="y">96</property>
                   </packing>
                 </child>
               </object>
@@ -317,7 +281,7 @@ Calle 12 N° 1018 -Tel. 02324-424151
                 <child>
                   <object class="GtkHButtonBox" id="hbuttonbox_stock">
                     <property name="width_request">1280</property>
-                    <property name="height_request">50</property>
+                    <property name="height_request">40</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="homogeneous">True</property>
@@ -333,8 +297,6 @@ Calle 12 N° 1018 -Tel. 02324-424151
                         <property name="relief">none</property>
                         <child>
                           <object class="GtkImage" id="image5">
-                            <property name="width_request">120</property>
-                            <property name="height_request">50</property>
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="pixbuf">./Images/agregar1.png</property>
@@ -350,7 +312,7 @@ Calle 12 N° 1018 -Tel. 02324-424151
                     <child>
                       <object class="GtkButton" id="eliminar_producto">
                         <property name="width_request">120</property>
-                        <property name="height_request">50</property>
+                        <property name="height_request">40</property>
                         <property name="visible">True</property>
                         <property name="sensitive">False</property>
                         <property name="can_focus">True</property>
@@ -359,8 +321,6 @@ Calle 12 N° 1018 -Tel. 02324-424151
                         <property name="relief">none</property>
                         <child>
                           <object class="GtkImage" id="image6">
-                            <property name="width_request">120</property>
-                            <property name="height_request">50</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="pixbuf">./Images/eliminar1.png</property>
@@ -376,7 +336,7 @@ Calle 12 N° 1018 -Tel. 02324-424151
                     <child>
                       <object class="GtkButton" id="modificar_producto">
                         <property name="width_request">120</property>
-                        <property name="height_request">50</property>
+                        <property name="height_request">40</property>
                         <property name="visible">True</property>
                         <property name="sensitive">False</property>
                         <property name="can_focus">True</property>
@@ -385,8 +345,6 @@ Calle 12 N° 1018 -Tel. 02324-424151
                         <property name="relief">none</property>
                         <child>
                           <object class="GtkImage" id="image7">
-                            <property name="width_request">120</property>
-                            <property name="height_request">50</property>
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="pixbuf">./Images/modificar1.png</property>
@@ -402,7 +360,7 @@ Calle 12 N° 1018 -Tel. 02324-424151
                     <child>
                       <object class="GtkButton" id="actualizar_producto">
                         <property name="width_request">120</property>
-                        <property name="height_request">50</property>
+                        <property name="height_request">40</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
@@ -410,8 +368,6 @@ Calle 12 N° 1018 -Tel. 02324-424151
                         <property name="relief">none</property>
                         <child>
                           <object class="GtkImage" id="image8">
-                            <property name="width_request">120</property>
-                            <property name="height_request">50</property>
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="pixbuf">./Images/actualizar1.png</property>
@@ -427,7 +383,7 @@ Calle 12 N° 1018 -Tel. 02324-424151
                     <child>
                       <object class="GtkButton" id="agregar_marca">
                         <property name="width_request">120</property>
-                        <property name="height_request">50</property>
+                        <property name="height_request">40</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
@@ -449,6 +405,8 @@ Calle 12 N° 1018 -Tel. 02324-424151
                     </child>
                     <child>
                       <object class="GtkButton" id="controlar_producto">
+                        <property name="width_request">120</property>
+                        <property name="height_request">40</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
@@ -571,7 +529,7 @@ Calle 12 N° 1018 -Tel. 02324-424151
                                     <property name="show_expanders">False</property>
                                     <property name="enable_grid_lines">both</property>
                                     <child>
-                                      <object class="GtkTreeViewColumn" id="bazar_codigo">
+                                      <object class="GtkTreeViewColumn" id="clm_codigo">
                                         <property name="resizable">True</property>
                                         <property name="title" translatable="yes">Codigo</property>
                                         <property name="expand">True</property>
@@ -581,6 +539,7 @@ Calle 12 N° 1018 -Tel. 02324-424151
                                         <property name="sort_column_id">1</property>
                                         <child>
                                           <object class="GtkCellRendererText" id="cellrenderertext">
+                                            <property name="cell_background_gdk">#ffff00000000</property>
                                             <property name="scale">2</property>
                                             <property name="weight">40000</property>
                                           </object>
@@ -591,7 +550,7 @@ Calle 12 N° 1018 -Tel. 02324-424151
                                       </object>
                                     </child>
                                     <child>
-                                      <object class="GtkTreeViewColumn" id="bazar_marca">
+                                      <object class="GtkTreeViewColumn" id="clm_descripcion">
                                         <property name="resizable">True</property>
                                         <property name="title" translatable="yes">Descripcion</property>
                                         <property name="expand">True</property>
@@ -601,6 +560,7 @@ Calle 12 N° 1018 -Tel. 02324-424151
                                         <property name="sort_column_id">4</property>
                                         <child>
                                           <object class="GtkCellRendererText" id="cellrenderertext5">
+                                            <property name="cell_background_gdk">#ffff00000000</property>
                                             <property name="scale">2</property>
                                             <property name="weight">40000</property>
                                           </object>
@@ -611,7 +571,7 @@ Calle 12 N° 1018 -Tel. 02324-424151
                                       </object>
                                     </child>
                                     <child>
-                                      <object class="GtkTreeViewColumn" id="bazar_costo">
+                                      <object class="GtkTreeViewColumn" id="clm_marca">
                                         <property name="resizable">True</property>
                                         <property name="title" translatable="yes">Marca</property>
                                         <property name="expand">True</property>
@@ -621,6 +581,7 @@ Calle 12 N° 1018 -Tel. 02324-424151
                                         <property name="sort_column_id">5</property>
                                         <child>
                                           <object class="GtkCellRendererText" id="cellrenderertext6">
+                                            <property name="cell_background_gdk">#ffff00000000</property>
                                             <property name="scale">2</property>
                                             <property name="weight">400000</property>
                                           </object>
@@ -631,7 +592,7 @@ Calle 12 N° 1018 -Tel. 02324-424151
                                       </object>
                                     </child>
                                     <child>
-                                      <object class="GtkTreeViewColumn" id="bazar_precio">
+                                      <object class="GtkTreeViewColumn" id="clm_costo">
                                         <property name="resizable">True</property>
                                         <property name="title" translatable="yes">Costo</property>
                                         <property name="expand">True</property>
@@ -641,6 +602,7 @@ Calle 12 N° 1018 -Tel. 02324-424151
                                         <property name="sort_column_id">6</property>
                                         <child>
                                           <object class="GtkCellRendererText" id="cellrenderertext7">
+                                            <property name="cell_background_gdk">#ffff00000000</property>
                                             <property name="scale">2</property>
                                             <property name="weight">40000</property>
                                           </object>
@@ -651,7 +613,7 @@ Calle 12 N° 1018 -Tel. 02324-424151
                                       </object>
                                     </child>
                                     <child>
-                                      <object class="GtkTreeViewColumn" id="bazar_stk_act">
+                                      <object class="GtkTreeViewColumn" id="clm_precio">
                                         <property name="resizable">True</property>
                                         <property name="title" translatable="yes">Precio</property>
                                         <property name="expand">True</property>
@@ -661,6 +623,7 @@ Calle 12 N° 1018 -Tel. 02324-424151
                                         <property name="sort_column_id">7</property>
                                         <child>
                                           <object class="GtkCellRendererText" id="cellrenderertext1">
+                                            <property name="cell_background_gdk">#ffff00000000</property>
                                             <property name="scale">2</property>
                                             <property name="weight">40000</property>
                                           </object>
@@ -671,7 +634,7 @@ Calle 12 N° 1018 -Tel. 02324-424151
                                       </object>
                                     </child>
                                     <child>
-                                      <object class="GtkTreeViewColumn" id="bazar_pnt_rep">
+                                      <object class="GtkTreeViewColumn" id="clm_stk_act">
                                         <property name="title" translatable="yes">Stk Act</property>
                                         <property name="expand">True</property>
                                         <property name="clickable">True</property>
@@ -680,6 +643,7 @@ Calle 12 N° 1018 -Tel. 02324-424151
                                         <property name="sort_column_id">8</property>
                                         <child>
                                           <object class="GtkCellRendererText" id="cellrenderertext3">
+                                            <property name="cell_background_gdk">#ffff00000000</property>
                                             <property name="scale">2</property>
                                             <property name="weight">40000</property>
                                           </object>
@@ -690,15 +654,28 @@ Calle 12 N° 1018 -Tel. 02324-424151
                                       </object>
                                     </child>
                                     <child>
-                                      <object class="GtkTreeViewColumn" id="treeviewcolumn1">
+                                      <object class="GtkTreeViewColumn" id="clm_ptn_rep">
                                         <property name="title" translatable="yes">Pnt rep</property>
                                         <child>
                                           <object class="GtkCellRendererText" id="cellrenderertext14">
+                                            <property name="cell_background_gdk">#ffff00000000</property>
                                             <property name="scale">2</property>
                                             <property name="weight">40000</property>
                                           </object>
                                           <attributes>
                                             <attribute name="text">6</attribute>
+                                          </attributes>
+                                        </child>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkTreeViewColumn" id="clm_bool">
+                                        <property name="visible">False</property>
+                                        <property name="title" translatable="yes">column</property>
+                                        <child>
+                                          <object class="GtkCellRendererText" id="cellrenderertext2"/>
+                                          <attributes>
+                                            <attribute name="text">7</attribute>
                                           </attributes>
                                         </child>
                                       </object>
@@ -718,8 +695,6 @@ Calle 12 N° 1018 -Tel. 02324-424151
                     </child>
                     <child type="label">
                       <object class="GtkLabel" id="label6">
-                        <property name="width_request">0</property>
-                        <property name="height_request">36</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="yalign">0</property>

@@ -8,6 +8,7 @@ from validaciones.validacion import codigo_no_repetido
 from validaciones.validacion import articulo_no_repetido
 from validaciones.validacion import es_int
 from validaciones.validacion import es_float
+from validaciones.validacion import pintar
 from altas.agregar_marca import nueva_marca
 
 from altas.question import question
@@ -44,21 +45,18 @@ class altas():
 		descripcion=self.entry_descripcion.get_text()
 		marca=self.entry_marca.get_text()
 		costo=float (self.entry_costo.get_text() )
-		print "aca"
 		if self.verificar_marca(marca):
-			print "ahora aca"
 			precio= round(costo*( 1+self.ganancia/100),1)
 			ruta = os.getcwd()
 			bbdd=bdapi.connect(ruta+'/Base_Datos/bd_stock.db')
 			cursor=bbdd.cursor()
-			cursor.execute(" INSERT INTO bd_stock (codigo,descripcion,marca,costo,precio,stk_disp,pnt_rep,aviso,sw) VALUES(?,?,?,?,?,?,?,?,?)",(codigo,descripcion,marca,costo,precio,0,0,False,True ) )
+			cursor.execute(" INSERT INTO bd_stock (codigo,descripcion,marca,costo,precio,stk_disp,pnt_rep,aviso,sw) VALUES(?,?,?,?,?,?,?,?,?)",(codigo,descripcion,marca,costo,precio,0,0,pintar(0,0),True ) )
 			bbdd.commit()
 			cursor.close()
 			bbdd.close()
-			self_padre.liststore.append( [int(codigo),descripcion,marca,costo,precio,0,0,False] )
+			self_padre.liststore.append( [int(codigo),descripcion,marca,costo,precio,0,0,pintar(0,0)] )
 			question(self,self_padre)
 		else:
-			print "ahora aca2"
 			nueva_marca(self,self_padre)
 
 	def validar_codigo(self,widget,liststore):
@@ -140,7 +138,7 @@ class altas():
 		self.glade = gtk.Builder()
 		self.glade.add_from_file(self.archivo_glade)
 
-		self.window = self.glade.get_object("window")
+		self.window = self.glade.get_object("window1")
 		self.entry_codigo = self.glade.get_object("entry_codigo")
 		self.entry_descripcion = self.glade.get_object("entry_descripcion")
 		self.entry_marca = self.glade.get_object("entry_marca")
