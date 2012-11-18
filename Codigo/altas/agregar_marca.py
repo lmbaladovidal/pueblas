@@ -4,6 +4,7 @@ import gtk,os
 
 from validaciones.validacion import caracteres_validos
 from validaciones.validacion import es_float
+from validaciones.validacion import pintar
 from altas.question import question
 
 import sqlite3 as bdapi
@@ -19,11 +20,11 @@ class nueva_marca:
 		ruta = os.getcwd()
 		bbdd=bdapi.connect(ruta+'/Base_Datos/bd_stock.db')
 		cursor=bbdd.cursor()
-		cursor.execute(" INSERT INTO bd_stock (codigo,descripcion,marca,costo,precio,stk_disp,pnt_rep,aviso,sw) VALUES(?,?,?,?,?,?,?,?,?)",(codigo,descripcion,marca,costo,precio,0,0,False,True ) )
+		cursor.execute(" INSERT INTO bd_stock (codigo,descripcion,marca,costo,precio,stk_disp,pnt_rep,aviso,sw) VALUES(?,?,?,?,?,?,?,?,?)",(codigo,descripcion,marca,costo,precio,0,0,pintar(0,0),True ) )
 		bbdd.commit()
 		cursor.close()
 		bbdd.close()
-		self_padre.liststore.append( [int(codigo),descripcion,marca,costo,precio,0,0,False] )
+		self_padre.liststore.append( [int(codigo),descripcion,marca,costo,precio,0,0,pintar(0,0)] )
 
 
 	def add_marca(self,widget,self_altas,self_padre):
