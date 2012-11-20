@@ -24,6 +24,19 @@ class nueva_marca:
 		self_padre.window.set_sensitive(True)
 		self.window.destroy()
 
+	def controlar_marca(self,marca):
+		ruta = os.getcwd()
+		bbdd=bdapi.connect(ruta+'/Base_Datos/bd_marcas.db')
+		cursor=bbdd.cursor()
+		cursor.execute("SELECT nombre FROM marca WHERE nombre =?",(marca,))
+		tupla = cursor.fetchone()
+		cursor.close()
+		bbdd.close()
+		if tupla == None:
+			return True
+		else:
+			return False
+
 
 	def aceptar_with_enter(self,widget,event,self_padre):
 		if event.keyval ==gtk.keysyms.Return:
@@ -42,8 +55,11 @@ class nueva_marca:
 		self.marca_ok=False
 		marca=self.entry_marca.get_text()
 		if caracteres_validos(marca) and marca != "":
-			self.entry_marca.set_icon_from_stock(1,gtk.STOCK_APPLY)
-			self.marca_ok=True
+			if self.controlar_marca(marca):
+				self.entry_marca.set_icon_from_stock(1,gtk.STOCK_APPLY)
+				self.marca_ok=True
+			else:
+				self.entry_marca.set_icon_from_stock(1,gtk.STOCK_DIALOG_ERROR)
 		else:
 			self.entry_marca.set_icon_from_stock(1,gtk.STOCK_DIALOG_ERROR)
 

@@ -73,3 +73,9 @@ def articulo_no_repetido_modificado(liststore_elejido,entry,id_nro_art):
 		return True
 	else:
 		return False
+
+def pintar(cantidad,cantidad_minima):
+	if cantidad <= cantidad_minima:
+		return True
+	else:
+		return False

@@ -5,6 +5,8 @@
   <object class="GtkWindow" id="window">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Agregar Marca</property>
+    <property name="resizable">False</property>
     <property name="window_position">center-always</property>
     <child>
       <object class="GtkFixed" id="fixed1">
@@ -27,7 +29,17 @@
             <property name="height_request">250</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="spacing">2</property>
+            <child>
+              <object class="GtkHSeparator" id="hseparator1">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">-1</property>
+              </packing>
+            </child>
             <child>
               <object class="GtkHButtonBox" id="dialog-action_area2">
                 <property name="visible">True</property>
@@ -35,6 +47,8 @@
                 <property name="layout_style">spread</property>
                 <child>
                   <object class="GtkButton" id="button_ok">
+                    <property name="width_request">120</property>
+                    <property name="height_request">40</property>
                     <property name="visible">True</property>
                     <property name="sensitive">False</property>
                     <property name="can_focus">True</property>
@@ -56,6 +70,8 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="button_no">
+                    <property name="width_request">120</property>
+                    <property name="height_request">40</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>

@@ -10,6 +10,8 @@
       <column type="gchararray"/>
       <!-- column-name marca -->
       <column type="gchararray"/>
+      <!-- column-name costo -->
+      <column type="gfloat"/>
       <!-- column-name precio -->
       <column type="gfloat"/>
       <!-- column-name stk -->
@@ -169,7 +171,26 @@
               <object class="GtkHButtonBox" id="hbuttonbox1">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="layout_style">end</property>
+                <child>
+                  <object class="GtkButton" id="button_cierre">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="use_action_appearance">False</property>
+                    <child>
+                      <object class="GtkImage" id="image3">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="pixbuf">../Images/cerrar_caja.png</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
                 <child>
                   <object class="GtkButton" id="button_cerrar">
                     <property name="width_request">120</property>
@@ -191,7 +212,7 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">False</property>
-                    <property name="position">0</property>
+                    <property name="position">1</property>
                   </packing>
                 </child>
               </object>
@@ -280,14 +301,14 @@
                         <property name="clickable">True</property>
                         <property name="reorderable">True</property>
                         <property name="sort_indicator">True</property>
-                        <property name="sort_column_id">2</property>
+                        <property name="sort_column_id">3</property>
                         <child>
                           <object class="GtkCellRendererText" id="cellrenderertext7">
                             <property name="scale">2</property>
                             <property name="weight">40000</property>
                           </object>
                           <attributes>
-                            <attribute name="text">2</attribute>
+                            <attribute name="text">3</attribute>
                           </attributes>
                         </child>
                       </object>
@@ -300,14 +321,14 @@
                         <property name="clickable">True</property>
                         <property name="reorderable">True</property>
                         <property name="sort_indicator">True</property>
-                        <property name="sort_column_id">3</property>
+                        <property name="sort_column_id">4</property>
                         <child>
                           <object class="GtkCellRendererText" id="cellrenderertext1">
                             <property name="scale">2</property>
                             <property name="weight">40000</property>
                           </object>
                           <attributes>
-                            <attribute name="text">3</attribute>
+                            <attribute name="text">4</attribute>
                           </attributes>
                         </child>
                       </object>
@@ -319,14 +340,14 @@
                         <property name="clickable">True</property>
                         <property name="reorderable">True</property>
                         <property name="sort_indicator">True</property>
-                        <property name="sort_column_id">4</property>
+                        <property name="sort_column_id">5</property>
                         <child>
                           <object class="GtkCellRendererText" id="cellrenderertext3">
                             <property name="scale">2</property>
                             <property name="weight">40000</property>
                           </object>
                           <attributes>
-                            <attribute name="text">4</attribute>
+                            <attribute name="text">5</attribute>
                           </attributes>
                         </child>
                       </object>
@@ -334,14 +355,14 @@
                     <child>
                       <object class="GtkTreeViewColumn" id="treeviewcolumn1">
                         <property name="title" translatable="yes">Pnt Rep</property>
-                        <property name="sort_column_id">5</property>
+                        <property name="sort_column_id">6</property>
                         <child>
                           <object class="GtkCellRendererText" id="cellrenderertext2">
                             <property name="scale">2</property>
                             <property name="weight">40000</property>
                           </object>
                           <attributes>
-                            <attribute name="text">5</attribute>
+                            <attribute name="text">6</attribute>
                           </attributes>
                         </child>
                       </object>
