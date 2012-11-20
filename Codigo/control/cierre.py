@@ -5,15 +5,19 @@ import gtk,os,time
 
 class cierre():
 	
-	def guardar_db(self):
+	def guardar_db(self,widget,window):
 		nombre = self.entry_nombre.get_text()
 		ruta = os.getcwd()
 		bbdd=bdapi.connect(ruta+'/Base_Datos/bd_caja.db')
 		cursor=bbdd.cursor()
-		cursor.execute("INSERT INTO bd_caja cajera=?, fecha=?, venta_bruta=?, ganancia=? "(nombre,self.fecha,self.total_b,self.total_n))
+		cursor.execute("INSERT INTO bd_caja (cajera,fecha,venta_bruta,ganancia) VALUES (?,?,?,?)",(nombre,self.fecha,self.total_b,self.total_n))
 		bbdd.commit()
 		cursor.close()
 		bbdd.close()
+		resumen = open("./control/resumen.txt","w")
+		resumen.close()
+		self.cerrar(None,window)
+		
 		
 	def fecha_act(self):
 		fecha = time.ctime()
@@ -27,7 +31,7 @@ class cierre():
 				palabra = ""
 		lista.append(palabra)
 		print lista
-		self.fecha = lista[0]+'_'+lista[2]+'_'+lista[1]+'_'+lista[4]+'_'+lista[3]
+		self.fecha = lista[0]+' '+lista[2]+' '+lista[1]+' '+lista[4]+' '+lista[3]
 		
 	def convertir_linea_a_dato(self,linea):
 		cadena = []
@@ -60,7 +64,16 @@ class cierre():
 		self.entry_ganancia_n.set_text(str(self.total_n))
 		self.entry_fecha.set_text(self.fecha)
 		
+	def delete_event(self,widget,event,window):
+		window.set_sensitive(True)
+		self.window.destroy()
+
+	def cerrar(self,widget,window):
+		window.set_sensitive(True)
+		self.window.destroy()
+		
 	def __init__ (self,self_padre):
+		self_padre.window.set_sensitive(False)
 		self.total_b = 0
 		self.total_n = 0
 		self.archivo_glade = "./control/ventana_cierre.glade"
@@ -75,6 +88,9 @@ class cierre():
 		self.entry_ganancia_n = self.glade.get_object("entry_ganancia_n")
 		self.btn_ok = self.glade.get_object("button_ok")
 		self.btn_quit = self.glade.get_object("button_quit")
+		self.window.connect("delete-event",self.delete_event,self_padre.window)
+		self.btn_ok.connect("clicked",self.guardar_db,self_padre.window)
+		self.btn_quit.connect("clicked",self.cerrar,self_padre.window)
 		self.escribir_treeview()
 		self.fecha_act()
 		self.completar_entrys()
