@@ -30,13 +30,13 @@ class nueva_marca:
 		cursor=bbdd.cursor()
 		cursor.execute("SELECT nombre FROM marca WHERE nombre =?",(marca,))
 		tupla = cursor.fetchone()
-		print tupla
+		cursor.close()
+		bbdd.close()
 		if tupla == None:
 			return True
 		else:
 			return False
-		cursor.close()
-		bbdd.close()
+
 
 	def aceptar_with_enter(self,widget,event,self_padre):
 		if event.keyval ==gtk.keysyms.Return:
